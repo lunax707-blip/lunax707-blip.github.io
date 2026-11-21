@@ -1,0 +1,214 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inkwell and Co, printable art and coloring pages</title><meta name="description" content="Printable art, patterns and coloring pages. Instant download, print at home.">
+<!--PINTEREST-->
+<link rel="alternate" type="application/rss+xml" title="Inkwell and Co wall art" href="/feed-wall-art.xml">
+<link rel="alternate" type="application/rss+xml" title="Inkwell and Co coloring" href="/feed-coloring.xml">
+</head><body style="margin:0"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.iw {
+  --wall: #F6F3EC;
+  --ink: #20294A;
+  --ink-2: #6A6F82;
+  --ink-3: #A3A4AC;
+  --rule: rgba(32, 41, 74, 0.14);
+  --label: #FFFFFF;
+  --coral: #D9583B;
+  --ledge-a: #E4DDCF;
+  --ledge-b: #CFC6B4;
+  --pad: clamp(18px, 4.5vw, 64px);
+  --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --body: "Instrument Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  background: var(--wall);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+@media (prefers-color-scheme: dark) {
+  .iw {
+    --wall: #131418;
+    --ink: #EFE9DC;
+    --ink-2: #A09F9A;
+    --ink-3: #6B6B6B;
+    --rule: rgba(239, 233, 220, 0.14);
+    --label: #1C1E24;
+    --coral: #EE7355;
+    --ledge-a: #2A2C33;
+    --ledge-b: #1B1C21;
+  }
+}
+.iw *, .iw *::before, .iw *::after { box-sizing: border-box; }
+.iw a { color: inherit; text-decoration: none; }
+.iw img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* top strip */
+.iw .top { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 20px var(--pad); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+.iw .top b { font-weight: 600; white-space: nowrap; }
+.iw .top nav span { text-align: right; }
+.iw .top nav { display: flex; gap: clamp(14px, 2.6vw, 30px); color: var(--ink-2); }
+.iw .top nav a { transition: color .25s var(--ease); }
+.iw .top nav a:hover { color: var(--coral); }
+
+/* room titles */
+.iw .room { display: flex; align-items: baseline; gap: 14px; padding: clamp(56px, 9vw, 130px) var(--pad) clamp(20px, 3vw, 36px); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.iw .room i { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.02em; text-transform: none; color: var(--ink); line-height: 1; }
+.iw .room span { flex: 1; height: 1px; background: var(--rule); }
+.iw .room.first { padding-top: clamp(10px, 2vw, 24px); }
+
+/* the hang */
+.iw .hang { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(14px, 2vw, 28px); row-gap: clamp(40px, 7vw, 110px); }
+.iw .piece { display: flex; gap: clamp(14px, 2vw, 28px); animation: iw-in .9s var(--ease) both; }
+.iw .art { overflow: hidden; aspect-ratio: 4 / 3; flex: 1; min-width: 0; }
+.iw .art img { transition: transform 1.2s var(--ease); }
+.iw .piece:hover .art img { transform: scale(1.03); }
+.iw .piece:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
+
+.iw .p1 { grid-column: 1 / -1; align-items: flex-end; padding-right: var(--pad); }
+.iw .p1 .art { flex: 0 0 74%; }
+.iw .p2 { grid-column: 1 / 6; flex-direction: column; padding-left: var(--pad); margin-top: clamp(40px, 9vw, 150px); animation-delay: .08s; }
+.iw .p3 { grid-column: 6 / 13; flex-direction: column; animation-delay: .16s; }
+.iw .p4 { grid-column: 1 / -1; flex-direction: row-reverse; align-items: flex-start; padding-left: var(--pad); animation-delay: .1s; }
+.iw .p4 .art { flex: 0 0 66%; }
+.iw .p2 .art, .iw .p3 .art { flex: none; }
+
+/* museum label */
+.iw .tag { background: var(--label); border: 1px solid var(--rule); padding: 14px 16px 13px; width: 100%; max-width: 250px; align-self: flex-end; transition: transform .4s var(--ease), border-color .4s var(--ease); }
+.iw .p2 .tag, .iw .p3 .tag { align-self: flex-start; }
+.iw .p4 .tag { align-self: flex-start; margin-right: auto; }
+.iw .piece:hover .tag, .iw .book:hover .tag { border-color: var(--coral); transform: translateY(-3px); }
+.iw .tag em { display: block; font-size: 10.5px; font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.iw .tag strong { display: block; font-family: var(--display); font-weight: 400; font-size: 19px; line-height: 1.15; letter-spacing: -0.01em; margin: 5px 0 3px; }
+.iw .tag small { display: block; font-size: 12.5px; color: var(--ink-2); }
+.iw .tag u { display: flex; justify-content: space-between; align-items: baseline; text-decoration: none; margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--rule); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.iw .tag u b { font-family: var(--display); font-weight: 400; font-size: 17px; letter-spacing: 0; color: var(--coral); }
+
+/* picture ledge */
+.iw .shelf { display: grid; grid-template-columns: 1.4fr 1.15fr 1fr 1fr 1fr; column-gap: clamp(14px, 2.4vw, 36px); padding: clamp(10px, 2vw, 24px) var(--pad) 0; align-items: end; }
+.iw .book { display: contents; }
+.iw .cover { grid-row: 1; aspect-ratio: 17 / 22; overflow: hidden; box-shadow: 14px 0 22px -14px rgba(20, 22, 40, 0.38), 0 10px 14px -10px rgba(20, 22, 40, 0.5); transform-origin: 50% 100%; transition: transform .5s var(--ease); animation: iw-in .9s var(--ease) both; }
+.iw .book:nth-child(2) .cover { animation-delay: .06s; } .iw .book:nth-child(3) .cover { animation-delay: .12s; }
+.iw .book:nth-child(4) .cover { animation-delay: .18s; } .iw .book:nth-child(5) .cover { animation-delay: .24s; }
+.iw .book:hover .cover { transform: rotate(-1.6deg) translateY(-4px); }
+.iw .book:focus-visible .cover { outline: 2px solid var(--coral); outline-offset: 4px; }
+.iw .ledge { grid-row: 2; grid-column: 1 / -1; height: 12px; margin: 0 calc(var(--pad) * -0.5); background: linear-gradient(var(--ledge-a), var(--ledge-b)); box-shadow: 0 12px 18px -10px rgba(20, 22, 40, 0.35); }
+.iw .book .tag { grid-row: 3; align-self: start; margin-top: clamp(18px, 2.4vw, 30px); max-width: none; padding: 11px 12px; }
+.iw .book .tag strong { font-size: 15.5px; }
+.iw .book .tag u { margin-top: 9px; padding-top: 7px; }
+
+/* follow */
+.iw .follow { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 5vw, 80px); align-items: end; padding: clamp(64px, 10vw, 150px) var(--pad) 0; }
+.iw .follow p { margin: 0; font-family: var(--display); font-weight: 300; font-size: clamp(24px, 3.2vw, 42px); line-height: 1.1; letter-spacing: -0.02em; }
+.iw .follow p i { color: var(--coral); }
+.iw .follow form { display: flex; align-items: center; border-bottom: 1px solid var(--ink); transition: border-color .25s var(--ease); }
+.iw .follow form:focus-within { border-color: var(--coral); }
+.iw .follow input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: 400 17px var(--body); padding: 12px 0; }
+.iw .follow input::placeholder { color: var(--ink-3); }
+.iw .follow button { background: none; border: 0; cursor: pointer; color: var(--ink); font: 600 12px var(--body); letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 0 12px 16px; transition: color .25s var(--ease), transform .25s var(--ease); }
+.iw .follow button:hover { color: var(--coral); transform: translateX(3px); }
+.iw .follow button:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+.iw .follow .msg { font-family: var(--body); font-size: 12.5px; letter-spacing: 0; color: var(--ink-2); margin: 8px 0 0; min-height: 1.4em; }
+
+/* sign */
+.iw .sign { padding: clamp(48px, 8vw, 110px) var(--pad) 22px; }
+.iw .sign div { font-family: var(--display); font-weight: 300; font-size: clamp(50px, 14.6vw, 224px); line-height: 0.86; letter-spacing: -0.05em; white-space: nowrap; }
+.iw .sign div i { font-weight: 300; color: var(--coral); }
+.iw .sign p { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; margin: 26px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+
+@keyframes iw-in { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .iw .piece, .iw .cover { animation: none; } .iw * { transition: none !important; } }
+
+@media (max-width: 760px) {
+  .iw .top nav a.opt { display: none; }
+  .iw .hang { display: block; }
+  .iw .piece, .iw .p1, .iw .p2, .iw .p3, .iw .p4 { flex-direction: column; padding: 0; margin: 0 0 44px; gap: 0; }
+  .iw .p1 .art, .iw .p4 .art { flex: none; }
+  .iw .p2 .art { margin-right: 16vw; }
+  .iw .p3 .art { margin-left: 16vw; }
+  .iw .piece .tag, .iw .p4 .tag { align-self: flex-start; margin: 12px 0 0 var(--pad); position: relative; max-width: 230px; }
+  .iw .p3 .tag { align-self: flex-end; margin: 12px var(--pad) 0 0; }
+  .iw .shelf { grid-template-columns: 58vw repeat(4, 44vw); column-gap: 14px; overflow-x: auto; padding-bottom: 18px; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .iw .shelf::-webkit-scrollbar { display: none; }
+  .iw .cover { scroll-snap-align: start; scroll-margin-left: var(--pad); }
+  .iw .ledge { margin: 0; }
+  .iw .follow { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="iw">
+  <header class="top">
+    <b>Inkwell and Co</b>
+    <nav>
+      <a class="opt" href="#wall">Wall art</a>
+      <a class="opt" href="#shelf">Coloring</a>
+      <span>Printable art, instant download</span>
+    </nav>
+  </header>
+
+  <div class="room first" id="wall"><i>Room one</i> Wall art <span></span> Sets of six</div>
+
+  <div class="hang">
+    <a class="piece p1" href="https://inkwellandco.gumroad.com/l/desert-light-prints">
+      <div class="art"><img src="/img/601wzbypoa13ffx9znkxzz4umpsx.jpg" alt="Desert Light, six landscape paintings shown framed"></div>
+      <div class="tag"><em>No. 01</em><strong>Desert Light</strong><small>Six landscape paintings. Digital files, up to 18 x 24 in.</small><u>View set <b>$8</b></u></div>
+    </a>
+    <a class="piece p2" href="https://inkwellandco.gumroad.com/l/abstract-art-prints">
+      <div class="art"><img src="/img/3a7clq9dlnygzayausktdsgsm0mj.jpg" alt="Abstract Art Prints, six abstract paintings shown framed" loading="lazy"></div>
+      <div class="tag"><em>No. 02</em><strong>Abstract Art Prints</strong><small>Six abstract paintings. Digital files, up to 18 x 24 in.</small><u>View set <b>$8</b></u></div>
+    </a>
+    <a class="piece p3" href="https://inkwellandco.gumroad.com/l/geometric-pattern-prints">
+      <div class="art"><img src="/img/ehmfk8p3b2qf5adulwxll9svrok5.jpg" alt="Geometric Pattern Prints, six colorful pattern posters shown framed" loading="lazy"></div>
+      <div class="tag"><em>No. 03</em><strong>Geometric Pattern Prints</strong><small>Six pattern posters. Vector sharp at 18 x 24 in.</small><u>View set <b>$8</b></u></div>
+    </a>
+    <a class="piece p4" href="https://inkwellandco.gumroad.com/l/kids-room-transport-prints">
+      <div class="art"><img src="/img/fqiqwou600o2zofg20s1hxwhzr70.jpg" alt="Things That Go, six kids' room transport prints shown framed" loading="lazy"></div>
+      <div class="tag"><em>No. 04</em><strong>Things That Go</strong><small>Six prints for a kids' room. Digital files, up to 18 x 24 in.</small><u>View set <b>$8</b></u></div>
+    </a>
+  </div>
+
+  <div class="room" id="shelf"><i>Room two</i> Coloring <span></span> Printable PDF</div>
+
+  <div class="shelf">
+    <a class="book" href="https://inkwellandco.gumroad.com/l/things-that-go-coloring">
+      <div class="cover"><img src="/img/cu1e8c377ezo8izmo0peedik7n78.jpg" alt="Things That Go and Places to See coloring book cover" loading="lazy"></div>
+      <div class="tag"><em>No. 05</em><strong>Things That Go and Places to See</strong><small>30 pages, ages 4 to 8</small><u>View <b>$5</b></u></div>
+    </a>
+    <a class="book" href="https://inkwellandco.gumroad.com/l/geometric-patterns-coloring">
+      <div class="cover"><img src="/img/xyruucqj3jyi6galyr1bd0sjac49.jpg" alt="Geometric Patterns coloring book cover" loading="lazy"></div>
+      <div class="tag"><em>No. 06</em><strong>Geometric Patterns</strong><small>20 patterns, teens and adults</small><u>View <b>$5</b></u></div>
+    </a>
+    <a class="book" href="https://inkwellandco.gumroad.com/l/trucks-and-diggers-coloring">
+      <div class="cover"><img src="/img/owzsvx4vo4s66xtl6zv08lnmngmc.jpg" alt="Trucks and Diggers coloring pages cover" loading="lazy"></div>
+      <div class="tag"><em>No. 07</em><strong>Trucks and Diggers</strong><small>10 pages, ages 4 to 8</small><u>View <b>$2</b></u></div>
+    </a>
+    <a class="book" href="https://inkwellandco.gumroad.com/l/sky-sea-space-coloring">
+      <div class="cover"><img src="/img/i7k3gtltszurexaiggr0qsrk8hb3.jpg" alt="Sky, Sea and Space coloring pages cover" loading="lazy"></div>
+      <div class="tag"><em>No. 08</em><strong>Sky, Sea and Space</strong><small>10 pages, ages 4 to 8</small><u>View <b>$2</b></u></div>
+    </a>
+    <a class="book" href="https://inkwellandco.gumroad.com/l/places-to-see-coloring">
+      <div class="cover"><img src="/img/2f3bqjnc334z6bjwwf09q258k6i4.jpg" alt="Places to See coloring pages cover" loading="lazy"></div>
+      <div class="tag"><em>No. 09</em><strong>Places to See</strong><small>10 pages, ages 4 to 8</small><u>View <b>$2</b></u></div>
+    </a>
+    <div class="ledge"></div>
+  </div>
+
+  <div class="follow">
+    <p>New work goes on the wall <i>quietly.</i> Leave an email to hear first.</p>
+    <div>
+      <form data-gumroad-follow>
+        <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" autocomplete="email" required>
+        <button type="submit">Follow</button>
+      </form>
+      <p class="msg" data-gumroad-follow-message></p>
+    </div>
+  </div>
+
+  <footer class="sign">
+    <div>Inkwell <i>and</i> Co</div>
+    <p><span>Printable art, patterns and coloring pages</span><span>© 2026. Files are for personal use</span></p>
+  </footer>
+</div>
+</body></html>
